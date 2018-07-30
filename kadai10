@@ -1,0 +1,13 @@
+ imshow('Mandrill.bmp');
+ figure,(''); 
+ 
+ ORG = imread('Mandrill.bmp'); % 原画像の入力  
+ ORG = rgb2gray(ORG); %カラーからグレイへの変換  
+ imagesc(ORG); colormap('gray'); colorbar;% 画像表示 
+ pause; % 一時停止
+ figure,('');          
+
+ IMG = edge(ORG,'prewitt'); % エッジ抽出（プレウィット法）  
+ imagesc(IMG); colormap('gray'); colorbar;% 画像表示  
+ pause; % 一時停止   
+ 
